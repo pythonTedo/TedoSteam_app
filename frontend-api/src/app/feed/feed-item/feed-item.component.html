@@ -1,0 +1,12 @@
+<ion-card class="photo-card" *ngIf="feedItem">
+  <ion-img [src]="feedItem.url"></ion-img>
+  <div class="inline-container">
+    <ion-card-content>
+      <p>{{feedItem.caption}}</p>
+      <p>Price:{{feedItem.price}}</p>
+    </ion-card-content>
+    <ion-button class="buy-btn" [ngStyle]="{'display':auth.checkLoginStatus()?'inline':'none'}" (click)="buyItem(feedItem)">
+      BUY
+    </ion-button>
+  </div>
+</ion-card>

@@ -1,0 +1,26 @@
+<!-- display login and register buttons if user is logged out -->
+<ion-item-group
+  *ngIf=" !( auth.currentUser$ | async ) ">
+    <ion-button  
+    (click)="presentRegister()">
+      Register
+    </ion-button>
+    <ion-button (click)="presentLogin()">
+     Log In
+    </ion-button>
+</ion-item-group>
+
+<!-- display the avatar if user is logged in -->
+<ion-item-group
+  *ngIf=" ( auth.currentUser$ | async ) ">
+  <ion-button (click)="addMoney()">
+    Add Money
+  </ion-button>
+  <ion-button (click)="gotToUserItems()">
+    {{( auth.currentUser$ | async ).email }}
+  </ion-button>
+  <ion-button 
+  (click)="logout()">
+    Log Out
+  </ion-button>
+</ion-item-group>

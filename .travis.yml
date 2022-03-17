@@ -1,0 +1,36 @@
+language: node_js
+node_js:
+  - 12
+
+services:
+  - docker
+
+# Pre-testing installs
+install:
+  - echo "nothing needs to be installed"
+
+# Scripts to be run such as tests
+before_script:
+  - echo "no tests"
+
+script:
+  - docker --version # print the version for logging
+  - docker build -t users-tedosteam-api ./users-api
+  - docker tag users-tedosteam-api teodorchakarov/users-tedosteam-api:v3
+
+  - docker build -t feed-tedosteam-api ./feed-api
+  - docker tag feed-tedosteam-api teodorchakarov/feed-tedosteam-api:v3
+
+  - docker build -t frontend-api ./frontend-api
+  - docker tag frontend-api teodorchakarov/frontend-api:v3
+
+  - docker build -t proxy-tedosteam-api ./reverseproxy
+  - docker tag proxy-tedosteam-api teodorchakarov/proxy-tedosteam-api:v3
+
+after_success:
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+  - docker push teodorchakarov/users-tedosteam-api:v3
+  - docker push teodorchakarov/feed-tedosteam-api:v3
+  - docker push teodorchakarov/frontend-api:v3
+  - docker push teodorchakarov/proxy-tedosteam-api:v3
+

@@ -1,0 +1,12 @@
+<form [formGroup]="moneyForm" (submit)="onSubmit($event)">
+  <ion-item>
+    <ion-label position="floating" color="primary">Amount</ion-label>
+    <ion-input type="number" formControlName="money" required></ion-input>
+  </ion-item>
+  <ion-button 
+    color="primary" 
+    type="submit"
+    [disabled]="!moneyForm.valid">
+    Add money
+  </ion-button>
+</form>

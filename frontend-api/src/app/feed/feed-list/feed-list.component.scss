@@ -1,0 +1,19 @@
+
+  .feed {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--ion-color-light-tint);
+    column-count: 2;
+    column-gap: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 708px;
+    row-gap: 40px;
+    flex-flow: wrap;
+    align-items: center;
+  }
+
+  app-feed-item{
+    width: 334px !important;
+  }
