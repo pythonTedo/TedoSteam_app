@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   appName: 'TedoSteam',
-  apiHost: 'http://a8d307c8cb8964113af2baae728a2ae7-1310580022.us-east-1.elb.amazonaws.com:8080/api/v0'
+  apiHost: 'http://a1fb678d2f14749f8bc565f47c5a9b5c-1248666436.us-east-1.elb.amazonaws.com:8080/api/v0'
 };
 
 /*

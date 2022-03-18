@@ -9,7 +9,7 @@ When you login you will see games that you can buy. Just press buy and you will 
 In Order to add money just click on ***add money*** button and add input!
 To go back to the menu click on next to ***TedoSteam*** and goback to Home!
 
-How To connect: *** aabc8f7b1b5a14d16a85aa03212e9a5b-129721623.us-east-1.elb.amazonaws.com  ***
+How To connect: *** http://a84bcdf59a3fc47ab9d9b73741a0da03-1128118364.us-east-1.elb.amazonaws.com  ***
 
 Issue: If you have problem with the path: delete /home or /useritems in case you reload the browser
 

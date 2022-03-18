@@ -6,7 +6,7 @@ data:
   AWS_REGION: us-east-1
   JWT_SECRET: helloworld
   POSTGRES_DATABASE: tedo-db
-  POSTGRES_HOST: tedo-db.cexgv6co77e0.us-east-1.rds.amazonaws.com
-  URL: http://abd59772c1d004e098da3042fffed2f8-2089166276.us-east-1.elb.amazonaws.com:8100
+  POSTGRES_HOST: tedo-db.cphsrmyvezlh.us-east-1.rds.amazonaws.com
+  URL: http://ad4da1239db03435f99b7b6136263ae2-473704458.us-east-1.elb.amazonaws.com:8100
 metadata:
   name: env-config

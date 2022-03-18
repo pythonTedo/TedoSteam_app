@@ -16,7 +16,7 @@ spec:
         api: external        
     spec:
       containers:
-      - image: teodorchakarov/frontend-api:v2
+      - image: teodorchakarov/frontend-api:v4
         name: frontend
         imagePullPolicy: Always          
         ports:
