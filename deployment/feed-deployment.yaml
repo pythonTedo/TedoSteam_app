@@ -15,7 +15,7 @@ spec:
         service: backend-feed
     spec:
       containers:
-      - image: teodorchakarov/feed-tedosteam-api:v1
+      - image: teodorchakarov/feed-tedosteam-api:v2
         name: backend-feed
         imagePullPolicy: Always  
         resources:
